@@ -5,34 +5,29 @@ app = marimo.App()
 
 
 @app.cell
-def __():
+def imports():
     import numpy as np
     import matplotlib.pyplot as plt
     return np, plt
 
 
 @app.cell
-def __(np):
+def generate_data(np):
     x = np.random.randn(10000)
     return x,
 
 
 @app.cell
-def __(x):
+def statistic(x):
     y = x.mean()
     print(y)
     return y,
 
 
 @app.cell
-def __(plt, x):
+def plot(plt, x):
     plt.hist(x, bins=100)
     plt.show()
-    return
-
-
-@app.cell
-def __():
     return
 
 
